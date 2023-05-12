@@ -1,0 +1,15 @@
+step1 : Install node js
+step2 : install node packages if not installed using "npm install"
+step3 : install xampp software
+step4 : start apache and mysql in xampp
+step5 : open https://localhost/phpmyadmin/ on browser
+step6 : create database by clicking on new on the left side of the page
+step7 : give "sql_login" name to the database
+step7 : give "users" name to the table with "3" columns
+step8 : give "id" name , type "INT" , select auto increment(A_I) to first column
+step9 : give "email" name , type "vaarchar" , length "100" column
+step10: give "password" name , type "text" to third column
+step11: open vs code 
+step12: open terminal
+step13: run "nodemon" command on the terminal
+step14: open "http://localhost:5000/" on browser
