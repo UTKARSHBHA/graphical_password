@@ -106,6 +106,8 @@ button {
   text-transform: uppercase;
   transition: transform 80ms ease-in;
   cursor: pointer;
+
+  margin-top: 15px;
 }
 
 button:active {
@@ -262,6 +264,6 @@ button.ghost {
   border: 2px solid #a03333;
 }
 
-#signupbtn {
+/* #signupbtn {
   margin-top: 15px;
-}
+} */
