@@ -10,7 +10,7 @@ function signIn() {
     // Parameters to pass to OAuth 2.0 endpoint.
     var params = {
         'client_id': '1073921633373-rafpe0vjtpnqrs3nofrog3h9vjii2q9m.apps.googleusercontent.com',
-        'redirect_uri': 'https://utkarshbha.github.io/',
+        'redirect_uri': 'https://www.ipec.org.in/',
         'response_type': 'token',
         'scope': 'https://www.googleapis.com/auth/userinfo.profile',
         'include_granted_scopes': 'true',

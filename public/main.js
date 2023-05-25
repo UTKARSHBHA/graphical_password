@@ -248,7 +248,7 @@ function sendMail3() {
 
 function NewTab() {
     window.open(
-        "https://utkarshbha.github.io/", "_blank");
+        "https://www.ipec.org.in/", "_blank");
 }
 
 
