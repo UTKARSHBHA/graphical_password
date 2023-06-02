@@ -1,16 +1,8 @@
-
-let alert = require('alert');
-
 const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-
 const express = require('express')
-const bodyParser = require('body-parser')
 const mysql = require('mysql')
-const multer = require('multer');
-const router = express.Router()
-
 const app = express()
+
 app.use(express.static('public'));
 const port = process.env.PORT || 5000;
 app.use(express.urlencoded({ extended: true }));
@@ -35,13 +27,13 @@ const db = mysql.createConnection({
 });
 
 app.post('/signup', async (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     const { email, password } = req.body;
     db.query('SELECT email from users WHERE email = ?', [email], async (err, results) => {
         if (err) {
             console.log(err);
         } else {
-            console.log(results);
+            // console.log(results);
             if (results.length > 0) {
                 console.log("email present already");
                 res.statusCode = 401;
@@ -49,7 +41,7 @@ app.post('/signup', async (req, res) => {
             }
             else {
                 let hashedPassword = await bcrypt.hash(password, 8);
-                console.log(hashedPassword);
+                // console.log(hashedPassword);
 
                 db.query('INSERT INTO users SET ?', { email: email, password: hashedPassword }, (err, results) => {
                     if (err) {
@@ -75,7 +67,7 @@ app.post('/signin', async (req, res) => {
             })
         }
         db.query('SELECT * FROM users WHERE email = ?', [email], async (err, results) => {
-            console.log(results);
+            // console.log(results);
             if (!results || !await bcrypt.compare(password, results[0].password)) {
                 res.status(401).sendFile(__dirname + '/index.html', {
                     message: 'Email or Password is incorrect'
